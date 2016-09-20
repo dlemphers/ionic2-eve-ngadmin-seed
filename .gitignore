@@ -1,0 +1,23 @@
+# Specifies files to intentionally ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+node_modules/
+
+mobile-client/www/build/
+mobile-client/platforms/
+mobile-client/plugins/
+mobile-client/.gradle
+mobile-client/app/environment.ts
+*.swp
+.DS_Store
+Thumbs.db
+
+*.pyc
+__pycache__/
+api/server/__pycache__/
+api/*.egg-info/
+
+db/dev/
+*.apk
+
+admin/environment.js

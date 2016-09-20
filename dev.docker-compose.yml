@@ -1,0 +1,71 @@
+version: '2'
+services:
+  db:
+    image: ionic-eve-seed:db
+    networks:
+      - ionicseed
+    ports:
+      - "27017"
+    volumes:
+      - ./db/dev:/data/db
+  api:
+    image: ionic-eve-seed:api
+    restart: "on-failure:3"
+    networks:
+      - ionicseed
+    volumes:
+      - ./api:/code
+    working_dir: /code
+    ports:
+      - "8888"
+    depends_on:
+      - db
+    links:
+      - db:db
+    entrypoint:
+      /code/start.sh
+  admin:
+    image: ionic-eve-seed:admin
+    networks:
+      - ionicseed
+    ports:
+      - "8000"
+    depends_on:
+      - api
+    links:
+      - api:api
+    volumes:
+      - ./admin:/code
+    working_dir: /code
+    entrypoint:
+      /code/start.sh
+  mobile-client:
+    image: ionic-eve-seed:ionic2
+    networks:
+      ionicseed:
+        ipv4_address: 172.16.239.8
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - ./mobile-client/SeedProject:/code
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./mobile-client/.gradle:/root/.gradle
+    environment:
+      - "TZ=America/Chicago"
+      - DISPLAY=unix$DISPLAY
+      - APP_ENVIRONMENT=dev
+    privileged: true
+    depends_on:
+      - api
+    links:
+      - api:api
+    stdin_open: true
+    working_dir: /code
+    entrypoint:
+      /code/start.sh
+networks:
+  ionicseed:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.16.239.0/24

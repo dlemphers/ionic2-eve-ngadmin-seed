@@ -1,0 +1,14 @@
+{
+  "name": "ng-admin",
+  "version": "1.0.0",
+  "description": "Admin site for API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ng-admin": "^1.0.0-alpha2"
+  }
+}

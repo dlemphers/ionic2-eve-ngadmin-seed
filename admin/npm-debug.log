@@ -1,0 +1,140 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'update' ]
+2 info using npm@3.10.3
+3 info using node@v6.5.0
+4 silly mapToRegistry name ng-admin
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry https://registry.npmjs.org/
+7 silly mapToRegistry data Result {
+7 silly mapToRegistry   raw: 'ng-admin',
+7 silly mapToRegistry   scope: null,
+7 silly mapToRegistry   escapedName: 'ng-admin',
+7 silly mapToRegistry   name: 'ng-admin',
+7 silly mapToRegistry   rawSpec: '',
+7 silly mapToRegistry   spec: 'latest',
+7 silly mapToRegistry   type: 'tag' }
+8 silly mapToRegistry uri https://registry.npmjs.org/ng-admin
+9 verbose request uri https://registry.npmjs.org/ng-admin
+10 verbose request no auth needed
+11 info attempt registry request try #1 at 4:21:20 PM
+12 verbose request id 57e856f885ed2449
+13 http request GET https://registry.npmjs.org/ng-admin
+14 http 200 https://registry.npmjs.org/ng-admin
+15 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+15 verbose headers   etag: '"AJR88RFCCIKGRI65P2NDGNBTD"',
+15 verbose headers   'content-type': 'application/json',
+15 verbose headers   'content-encoding': 'gzip',
+15 verbose headers   'cache-control': 'max-age=300',
+15 verbose headers   'content-length': '9372',
+15 verbose headers   'accept-ranges': 'bytes',
+15 verbose headers   date: 'Tue, 20 Sep 2016 16:21:20 GMT',
+15 verbose headers   via: '1.1 varnish',
+15 verbose headers   age: '195',
+15 verbose headers   connection: 'keep-alive',
+15 verbose headers   'x-served-by': 'cache-dfw1845-DFW',
+15 verbose headers   'x-cache': 'HIT',
+15 verbose headers   'x-cache-hits': '1',
+15 verbose headers   'x-timer': 'S1474388480.542328,VS0,VE0',
+15 verbose headers   vary: 'Accept-Encoding' }
+16 silly get cb [ 200,
+16 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+16 silly get     etag: '"AJR88RFCCIKGRI65P2NDGNBTD"',
+16 silly get     'content-type': 'application/json',
+16 silly get     'content-encoding': 'gzip',
+16 silly get     'cache-control': 'max-age=300',
+16 silly get     'content-length': '9372',
+16 silly get     'accept-ranges': 'bytes',
+16 silly get     date: 'Tue, 20 Sep 2016 16:21:20 GMT',
+16 silly get     via: '1.1 varnish',
+16 silly get     age: '195',
+16 silly get     connection: 'keep-alive',
+16 silly get     'x-served-by': 'cache-dfw1845-DFW',
+16 silly get     'x-cache': 'HIT',
+16 silly get     'x-cache-hits': '1',
+16 silly get     'x-timer': 'S1474388480.542328,VS0,VE0',
+16 silly get     vary: 'Accept-Encoding' } ]
+17 verbose get saving ng-admin to /root/.npm/registry.npmjs.org/ng-admin/.cache.json
+18 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+19 info outdated updating [ { dep:
+19 info outdated      Node {
+19 info outdated        id: 41,
+19 info outdated        package: [Object],
+19 info outdated        path: '/code/node_modules/ng-admin',
+19 info outdated        realpath: '/code/node_modules/ng-admin',
+19 info outdated        parent: [Object],
+19 info outdated        isLink: false,
+19 info outdated        children: [Object],
+19 info outdated        error: null,
+19 info outdated        loaded: false,
+19 info outdated        requiredBy: [Object],
+19 info outdated        requires: [Object],
+19 info outdated        missingDeps: {},
+19 info outdated        missingDevDeps: {},
+19 info outdated        phantomChildren: {},
+19 info outdated        location: '/ng-admin',
+19 info outdated        userRequired: false,
+19 info outdated        existing: false,
+19 info outdated        isTop: false,
+19 info outdated        resolved: [Object] },
+19 info outdated     depname: 'ng-admin',
+19 info outdated     current: '1.0.0-alpha5',
+19 info outdated     wanted: '1.0.0-alpha7',
+19 info outdated     latest: '1.0.0-alpha7',
+19 info outdated     req: '^1.0.0-alpha2',
+19 info outdated     what: 'ng-admin@1.0.0-alpha7' } ]
+20 silly loadCurrentTree Starting
+21 silly install loadCurrentTree
+22 silly install readLocalPackageData
+23 silly fetchPackageMetaData ng-admin@1.0.0-alpha7
+24 silly fetchNamedPackageData ng-admin
+25 silly mapToRegistry name ng-admin
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry data Result {
+28 silly mapToRegistry   raw: 'ng-admin',
+28 silly mapToRegistry   scope: null,
+28 silly mapToRegistry   escapedName: 'ng-admin',
+28 silly mapToRegistry   name: 'ng-admin',
+28 silly mapToRegistry   rawSpec: '',
+28 silly mapToRegistry   spec: 'latest',
+28 silly mapToRegistry   type: 'tag' }
+29 silly mapToRegistry uri https://registry.npmjs.org/ng-admin
+30 verbose get https://registry.npmjs.org/ng-admin not expired, no request
+31 silly install normalizeTree
+32 silly loadCurrentTree Finishing
+33 silly loadIdealTree Starting
+34 silly install loadIdealTree
+35 silly cloneCurrentTree Starting
+36 silly install cloneCurrentTreeToIdealTree
+37 silly cloneCurrentTree Finishing
+38 silly loadShrinkwrap Starting
+39 silly install loadShrinkwrap
+40 silly loadShrinkwrap Finishing
+41 silly loadAllDepsIntoIdealTree Starting
+42 silly install loadAllDepsIntoIdealTree
+43 silly rollbackFailedOptional Starting
+44 silly rollbackFailedOptional Finishing
+45 silly runTopLevelLifecycles Starting
+46 silly runTopLevelLifecycles Finishing
+47 silly install printInstalled
+48 verbose stack Error: Refusing to install ng-admin as a dependency of itself
+48 verbose stack     at checkSelf (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:53:14)
+48 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+48 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+48 verbose stack     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+48 verbose stack     at /usr/local/lib/node_modules/npm/lib/install/validate-args.js:16:5
+48 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:52:35
+48 verbose stack     at Array.forEach (native)
+48 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:52:11
+48 verbose stack     at Array.forEach (native)
+48 verbose stack     at asyncMap (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:51:8)
+49 verbose cwd /code
+50 error Linux 4.4.0-36-generic
+51 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "update"
+52 error node v6.5.0
+53 error npm  v3.10.3
+54 error code ENOSELF
+55 error Refusing to install ng-admin as a dependency of itself
+56 error If you need help, you may report this error at:
+56 error     <https://github.com/npm/npm/issues>
+57 verbose exit [ 1, true ]
